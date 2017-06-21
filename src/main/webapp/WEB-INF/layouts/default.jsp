@@ -153,7 +153,7 @@
 				<div id="footer">
 					<div class="copyright">
 						<a href="http://www.mycodes.net/" target="_blank">2014 ©
-							springsolo</a>
+							nobody</a>
 					</div>
 				</div>
 				<!--END FOOTER-->
@@ -183,6 +183,7 @@
 	src="${ctx}/static/admin/script/jquery.bootstrap.teninedialog.v3.js"></script>
 	<script src="${ctx}/static/admin/Validform/js/Validform_v5.3.2_min.js"></script>
      <script type="text/javascript">
+     $.Datatype.d=/^[0-9]+(.[0-9]{1,3})?$/
      //var currentId="<sitemesh:getProperty property="page.currentId"/>";
      $li=$('#side-menu').find('> li:eq(<sitemesh:getProperty property="page.currentId"/>)');
       $li.addClass('active');

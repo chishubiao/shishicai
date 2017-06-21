@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springside.modules.mapper.BeanMapper;
 
-import cn.lj.shishicai.dto.AgentDto;
 import cn.lj.shishicai.entity.Agent;
+import cn.lj.shishicai.entity.AgentDto;
 import cn.lj.shishicai.entity.User;
 import cn.lj.shishicai.service.AgentService;
 import cn.lj.shishicai.service.UserService;
@@ -39,29 +39,24 @@ public class AgentController extends ABaseController {
 
 	@ResponseBody
 	@RequestMapping("/findPage")
-	public Map<String, Object> findPage(@RequestParam(defaultValue = "20") Integer pageSize,
-			@RequestParam(defaultValue = "1") Integer pageNumber) {
-		Map<String, Object> searchParams = new HashMap<>();
+	public Map<String, Object> findPage(@RequestParam(defaultValue = "20") Integer pageSize, @RequestParam(defaultValue = "1") Integer pageNumber) {
+		Page<AgentDto> page = null;
 		if (SessionUser.getType() == User.UserType.AGENT.getType()) {
-			searchParams.put("EQ_parentId", SessionUser.getUserId());
+			page = agentService.getBrokerPageByParentId(SessionUser.getUserId(), pageNumber, pageSize);
+		} else {
+			page = agentService.getAgentPage(pageNumber, pageSize);
 		}
-		Page<Agent> page = agentService.searchAllByPageSort(searchParams, pageNumber, pageSize, null);
-		List<Agent> agentList = page.getContent();
-		List<AgentDto> agentDtos = new ArrayList<>();
-		for (Agent agent : agentList) {
-
-			User user = userService.getById(agent.getId());
-			AgentDto agentDto = map(user, agent);
-			agentDtos.add(agentDto);
-		}
-		Page<AgentDto> agentPage = new PageImpl<>(agentDtos, new PageRequest(page.getNumber(), page.getSize()),
-				page.getTotalElements());
-		return getReturnMap(SUCCESS_CODE, "获取成功", agentPage);
+		return getReturnMap(SUCCESS_CODE, "获取成功", page);
+	}
+	
+	@RequestMapping("/edit")
+	public String edit(Integer id){
+		return "agent/edit";
+	}
+	
+	@RequestMapping("/create")
+	public String create(Integer id){
+		return "agent/create";
 	}
 
-	private AgentDto map(User user, Agent agent) {
-		AgentDto agentDto = BeanMapper.map(user, AgentDto.class);
-		BeanMapper.copy(agent, agentDto);
-		return agentDto;
-	}
 }

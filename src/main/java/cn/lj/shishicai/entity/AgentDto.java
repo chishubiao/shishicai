@@ -1,10 +1,13 @@
-package cn.lj.shishicai.dto;
+package cn.lj.shishicai.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class AgentDto {
-
+    @Id
 	private int id;
 
 	private Date createTime;
@@ -123,6 +126,19 @@ public class AgentDto {
 
 	public void setParentId(int parentId) {
 		this.parentId = parentId;
+	}
+
+	public AgentDto(int id, String username, byte status,BigDecimal creditLimit, BigDecimal paidRate, BigDecimal credit) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.creditLimit = creditLimit;
+		this.paidRate = paidRate;
+		this.credit = credit;
+	}
+
+	public AgentDto() {
+		super();
 	}
 
 }

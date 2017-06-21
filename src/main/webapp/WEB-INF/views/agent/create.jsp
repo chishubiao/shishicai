@@ -50,59 +50,39 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
-											<div class="form-group">
-												<label for="inputEmail" class="control-label"> 真实姓名</label>
-												<div class="input-icon right">
-													<input id="" type="text" placeholder="输入真实姓名" datatype="*"
-														name="realName" class="form-control">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-4">
-											<div class="form-group">
-												<label for="inputName" class="control-label">邮箱</label>
-												<div class="input-icon right">
-													<input id="inputName" name="email" type="text" datatype="e"
-														placeholder="输入邮箱地址" class="form-control">
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group">
-												<label for="inputEmail" class="control-label"> 电话号码</label>
-												<div class="input-icon right">
-													<input id="" type="text" placeholder="输入电话号码" datatype="m"
-														name="phone" class="form-control">
-												</div>
-											</div>
-										</div>
 										<div class="col-md-2">
 											<div class="form-group">
 												<label for="inputEmail" class="control-label"> 状态</label>
 												<div class="input-icon right">
 													<select class="form-control" name="status">
-														<option value="1">有效</option>
-														<option value="0">无效</option>
+														<option value="1">激活</option>
+														<option value="0">禁用</option>
 													</select>
 
 												</div>
 											</div>
 										</div>
-										<div class="col-md-2">
+										
+									</div>
+									<div class="row">
+										<div class="col-md-4">
 											<div class="form-group">
-												<label for="inputEmail" class="control-label"> 类型</label>
+												<label for="inputEmail" class="control-label">用户信用</label>
 												<div class="input-icon right">
-													<select class="form-control" name="type">
-														<option value="0">普通管理员</option>
-<!-- 														<option value="1">超级管理员</option> -->
-													</select>
-
+													<input id="" type="text" placeholder="请输入信用值" datatype="d"
+														name="creditLimit" class="form-control">
 												</div>
 											</div>
-										</div>
+										</div>	
+										<div class="col-md-4">
+											<div class="form-group">
+												<label for="inputEmail" class="control-label">赔率</label>
+												<div class="input-icon right">
+													<input id="" type="text" placeholder="请输入赔率" datatype="d"
+														name="paidRate" class="form-control">
+												</div>
+											</div>
+										</div>	
 									</div>
 									<div class="form-group">
 										<label for="inputMessage" class="control-label">备注</label>

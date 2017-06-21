@@ -86,18 +86,12 @@
 										<td>
 											<!--[$item.paidRate]-->
 										</td>
-										<td>
-											<!--[$item.credit]-->
-										</td>
+										
 										<td>
 											<!--[$item.creditLimit]-->
 										</td>
-<td>
-											<!--[if $item.type=='1']-->
-                                                                                                                                                      超级管理员                                                                                                          
-                                            <!--[else]-->
-                                                                                                                                                         普通管理员
-                                            <!--[/if]-->
+                                        <td>
+											<!--[$item.credit]-->
 										</td>
 										<td>
 											<!--[if $item.status=='1']-->
