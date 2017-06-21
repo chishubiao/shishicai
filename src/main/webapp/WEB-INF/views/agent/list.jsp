@@ -74,7 +74,7 @@
 	
 </body>
 
-<content tag="page-title">管理员列表</content>
+<content tag="page-title">代理列表</content>
 <content tag="currentId">1</content>
 <div id="javascript">
 	<script type="text/ftpl" id="msgContent">
@@ -94,10 +94,10 @@
 											<!--[$item.credit]-->
 										</td>
 										<td>
-											<!--[if $item.status=='1']-->
-                                                                                                                                                          有效 
+											<!--[if $item.status==1]-->
+                                                                                                                                                          激活 
                                             <!--[else]-->
-                                                                                                                                                         失效
+                                                                                                                                                         禁用
                                             <!--[/if]-->
 										</td>
 

@@ -30,21 +30,24 @@ public class Bet implements Serializable {
 	@Column(name="game_id")
 	private int gameId;
 
-	@Column(name="paid_amount")
-	private BigDecimal paidAmount;
+	@Column(name="broker_paid_amount")
+	private BigDecimal brokerPaidAmount;
 
-	@Column(name="paid_rate")
-	private BigDecimal paidRate;
+	@Column(name="broker_paid_rate")
+	private BigDecimal brokerPaidRate;
+	
+	
+	@Column(name="agent_paid_amount")
+	private BigDecimal agentPaidAmount;
+
+	@Column(name="agent_paid_rate")
+	private BigDecimal agentPaidRate;
 
 	private int param1;
 
 	private int param2;
 
-	private int param3;
-
-	private int param4;
-
-	private int param5;
+	
 
 	private int sequence;
 
@@ -93,21 +96,7 @@ public class Bet implements Serializable {
 		this.gameId = gameId;
 	}
 
-	public BigDecimal getPaidAmount() {
-		return this.paidAmount;
-	}
-
-	public void setPaidAmount(BigDecimal paidAmount) {
-		this.paidAmount = paidAmount;
-	}
-
-	public BigDecimal getPaidRate() {
-		return this.paidRate;
-	}
-
-	public void setPaidRate(BigDecimal paidRate) {
-		this.paidRate = paidRate;
-	}
+	
 
 	public int getParam1() {
 		return this.param1;
@@ -125,28 +114,36 @@ public class Bet implements Serializable {
 		this.param2 = param2;
 	}
 
-	public int getParam3() {
-		return this.param3;
+	public BigDecimal getBrokerPaidAmount() {
+		return brokerPaidAmount;
 	}
 
-	public void setParam3(int param3) {
-		this.param3 = param3;
+	public void setBrokerPaidAmount(BigDecimal brokerPaidAmount) {
+		this.brokerPaidAmount = brokerPaidAmount;
 	}
 
-	public int getParam4() {
-		return this.param4;
+	public BigDecimal getBrokerPaidRate() {
+		return brokerPaidRate;
 	}
 
-	public void setParam4(int param4) {
-		this.param4 = param4;
+	public void setBrokerPaidRate(BigDecimal brokerPaidRate) {
+		this.brokerPaidRate = brokerPaidRate;
 	}
 
-	public int getParam5() {
-		return this.param5;
+	public BigDecimal getAgentPaidAmount() {
+		return agentPaidAmount;
 	}
 
-	public void setParam5(int param5) {
-		this.param5 = param5;
+	public void setAgentPaidAmount(BigDecimal agentPaidAmount) {
+		this.agentPaidAmount = agentPaidAmount;
+	}
+
+	public BigDecimal getAgentPaidRate() {
+		return agentPaidRate;
+	}
+
+	public void setAgentPaidRate(BigDecimal agentPaidRate) {
+		this.agentPaidRate = agentPaidRate;
 	}
 
 	public int getSequence() {

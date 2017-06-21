@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50709
 File Encoding         : 65001
 
-Date: 2017-06-21 07:29:10
+Date: 2017-06-21 23:38:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,6 +31,8 @@ CREATE TABLE `agent` (
 -- ----------------------------
 -- Records of agent
 -- ----------------------------
+INSERT INTO `agent` VALUES ('3', '500.0000', '500.0000', null, '0');
+INSERT INTO `agent` VALUES ('4', '200.0000', '200.0000', null, '3');
 
 -- ----------------------------
 -- Table structure for bet
@@ -44,13 +46,13 @@ CREATE TABLE `bet` (
   `type` varchar(255) DEFAULT NULL,
   `param1` int(255) DEFAULT NULL,
   `param2` int(255) DEFAULT NULL,
-  `param3` int(255) DEFAULT NULL,
-  `param4` int(11) DEFAULT NULL,
-  `param5` int(11) DEFAULT NULL,
   `bet_amount` decimal(10,4) DEFAULT NULL,
-  `paid_rate` decimal(10,4) DEFAULT NULL,
-  `paid_amount` decimal(10,4) DEFAULT NULL,
+  `agent_paid_rate` decimal(10,4) DEFAULT NULL,
+  `agent_paid_amount` decimal(10,4) DEFAULT NULL,
   `agent_id` int(11) DEFAULT NULL,
+  `broker_paid_amount` decimal(10,4) DEFAULT NULL,
+  `broker_paid_rate` decimal(10,4) DEFAULT NULL,
+  `flag` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -106,10 +108,11 @@ CREATE TABLE `user` (
   `remark` varchar(255) DEFAULT NULL,
   `type` tinyint(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '1', '2017-06-01 22:45:48', '2017-06-01 22:45:52', 'jjj', '1');
-INSERT INTO `user` VALUES ('2', 'agent1', '1111111111', '1', '2017-06-21 01:04:15', '2017-06-07 01:04:18', 'sgadg', '2');
+INSERT INTO `user` VALUES ('3', 'agent', 'e10adc3949ba59abbe56e057f20f883e', '1', '2017-06-21 22:41:59', '2017-06-21 22:41:59', '', '2');
+INSERT INTO `user` VALUES ('4', 'broker', 'e10adc3949ba59abbe56e057f20f883e', '1', '2017-06-21 22:45:01', '2017-06-21 22:45:01', '', '3');

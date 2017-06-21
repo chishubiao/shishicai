@@ -97,7 +97,7 @@
 
 					<div class="clearfix"></div>
 					<li><a
-						href="${ctx}/system/index"><i class="fa fa-tachometer fa-fw">
+						href="${ctx}/index"><i class="fa fa-tachometer fa-fw">
 								<div class="icon-bg bg-orange"></div>
 						</i><span class="menu-title">首页</span></a></li>
 					<li><a
@@ -105,11 +105,10 @@
 								<div class="icon-bg bg-green"></div>
 						</i><span class="menu-title">用户管理</span><span class="fa arrow"></span></a>
 						<ul class="nav nav-second-level collapse">
-						<shiro:hasRole name="admin">
-							<li><a href="${ctx}/admin">代理列表</a></li>
-						</shiro:hasRole>
-							<li><a href="${ctx}/customer">顾客列表</a></li>
-							<li><a href="${ctx}/admin/toModifyPassword">修改密码</a></li>
+						<shiro:hasAnyRoles name="admin,agent">
+							<li><a href="${ctx}/agent">代理列表</a></li>
+						</shiro:hasAnyRoles>
+							<li><a href="${ctx}/user/edit">修改个人信息</a></li>
 						</ul></li>
 						<li><a
 						href="#"><i class="fa fa-send-o fa-fw">

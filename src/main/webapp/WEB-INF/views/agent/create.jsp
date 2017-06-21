@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>添加管理员</title>
+<title>添加代理</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,7 +26,7 @@
 
 				<div class="col-lg-12">
 					<div class="panel panel-green">
-						<div class="panel-heading">添加管理员</div>
+						<div class="panel-heading">添加代理</div>
 						<div class="panel-body pan">
 							<form onsubmit="return false;" id="createForm">
 								<div class="form-body pal">
@@ -36,8 +36,7 @@
 												<label for="inputName" class="control-label">用户名</label>
 												<div class="input-icon right">
 													<input id="inputName" name="username" type="text"
-														datatype="*" placeholder="输入用户名"
-														ajaxurl="${ctx}/admin/checkUsername" class="form-control">
+														datatype="*" placeholder="输入用户名" class="form-control">
 												</div>
 											</div>
 										</div>
@@ -103,7 +102,7 @@
 	</div>
 </body>
 
-<content tag="page-title">添加管理员</content> <content
+<content tag="page-title">添加代理</content> <content
 	tag="currentId">1</content>
 <div id="javascript">
 <script type="text/javascript" src="${ctx}/static/p/common.js"></script>
@@ -114,8 +113,8 @@
 		function tijiao() {
 			if (demo.check()) {
 				$('#createForm').tijiao({
-					url : "${ctx}/admin/save",
-					redirectUrl : "${ctx}/admin"
+					url : "${ctx}/agent/save",
+					redirectUrl : "${ctx}/agent"
 				});
 			}
 		}

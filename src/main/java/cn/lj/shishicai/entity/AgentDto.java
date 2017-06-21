@@ -135,6 +135,7 @@ public class AgentDto {
 		this.creditLimit = creditLimit;
 		this.paidRate = paidRate;
 		this.credit = credit;
+		this.status=status;
 	}
 
 	public AgentDto() {

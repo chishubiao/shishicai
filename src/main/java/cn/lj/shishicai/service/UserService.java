@@ -17,6 +17,9 @@ public class UserService extends ABaseService<User,Integer> {
 		
 		return userDao.findByUsername(username);
 	}
+	public boolean isExistUsername(String username) {
+		return userDao.findByUsername(username)!=null;
+	}
 
 
 
