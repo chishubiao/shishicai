@@ -24,8 +24,6 @@ public class AgentDto {
 
 	private String username;
 
-	private BigDecimal creditLimit;
-
 	private BigDecimal paidRate;
 
 	private BigDecimal credit;
@@ -96,13 +94,7 @@ public class AgentDto {
 		this.username = username;
 	}
 
-	public BigDecimal getCreditLimit() {
-		return creditLimit;
-	}
 
-	public void setCreditLimit(BigDecimal creditLimit) {
-		this.creditLimit = creditLimit;
-	}
 
 	public BigDecimal getPaidRate() {
 		return paidRate;
@@ -128,11 +120,10 @@ public class AgentDto {
 		this.parentId = parentId;
 	}
 
-	public AgentDto(int id, String username, byte status,BigDecimal creditLimit, BigDecimal paidRate, BigDecimal credit) {
+	public AgentDto(int id, String username, byte status,BigDecimal paidRate, BigDecimal credit) {
 		super();
 		this.id = id;
 		this.username = username;
-		this.creditLimit = creditLimit;
 		this.paidRate = paidRate;
 		this.credit = credit;
 		this.status=status;

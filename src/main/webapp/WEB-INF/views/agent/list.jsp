@@ -52,7 +52,6 @@
 										<th>用户名</th>
 										<th>赔率</th>
 										<th>用户信用</th>
-										<th>剩余信用值</th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -86,10 +85,6 @@
 										<td>
 											<!--[$item.paidRate]-->
 										</td>
-										
-										<td>
-											<!--[$item.creditLimit]-->
-										</td>
                                         <td>
 											<!--[$item.credit]-->
 										</td>
@@ -101,8 +96,7 @@
                                             <!--[/if]-->
 										</td>
 
-										<td><a href="${ctx}/agent/edit/<!--[$item.id]-->"><span
-												class="label label-sm label-success">编辑</span></a>
+										<td></td>
 									</tr>
 									<!--[/each]-->
 </script>

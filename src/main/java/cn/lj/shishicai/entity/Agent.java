@@ -17,9 +17,6 @@ public class Agent implements Serializable {
 	@Id
 	private int id;
 
-	@Column(name="credit_limit")
-	private BigDecimal creditLimit;
-
 	@Column(name="paid_rate")
 	private BigDecimal paidRate;
 
@@ -39,15 +36,6 @@ public class Agent implements Serializable {
 		this.id = id;
 	}
 
-	
-
-	public BigDecimal getCreditLimit() {
-		return creditLimit;
-	}
-
-	public void setCreditLimit(BigDecimal creditLimit) {
-		this.creditLimit = creditLimit;
-	}
 
 	public BigDecimal getPaidRate() {
 		return paidRate;

@@ -108,7 +108,7 @@
 						<shiro:hasAnyRoles name="admin,agent">
 							<li><a href="${ctx}/agent">代理列表</a></li>
 						</shiro:hasAnyRoles>
-							<li><a href="${ctx}/user/edit">修改个人信息</a></li>
+							<li><a href="${ctx}/user/toModifyPassword">修改密码</a></li>
 						</ul></li>
 						<li><a
 						href="#"><i class="fa fa-send-o fa-fw">

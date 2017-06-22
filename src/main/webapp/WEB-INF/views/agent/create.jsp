@@ -69,7 +69,7 @@
 												<label for="inputEmail" class="control-label">用户信用</label>
 												<div class="input-icon right">
 													<input id="" type="text" placeholder="请输入信用值" datatype="d"
-														name="creditLimit" class="form-control">
+														name="credit" class="form-control">
 												</div>
 											</div>
 										</div>	
