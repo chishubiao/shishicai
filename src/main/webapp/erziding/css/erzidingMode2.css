@@ -1,0 +1,41 @@
+﻿.td1 {
+    /*FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;*/
+    TEXT-DECORATION: none;
+    BACKGROUND-COLOR: white;
+}
+
+.td2 {
+    /*FONT-FAMILY: Verdana;
+    FONT-SIZE: 10pt;*/
+    TEXT-DECORATION: none;
+    BACKGROUND-COLOR: #ffff00;
+}
+
+.c1 {
+    BACKGROUND-COLOR: #F3D8D6;
+    TEXT-ALIGN: center;
+    font-family: Verdana;
+    font-size: 9pt;
+    COLOR: #202040;
+}
+
+.indw {
+    width: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.numberfrank td {
+    line-height: 1.5em;
+    height: 26px;
+    padding: 2px;    
+}
+.numberfrank td span{
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight:bold;
+}
+.numberfrank tr.content td{
+    cursor: pointer;
+}
