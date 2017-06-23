@@ -6,7 +6,7 @@ var keydowncount = 0;
 $(function () {
     //自动定时获取最新赔率
     getCurrentRateTime();
-    //loadballnamedata("口XX口", '7');
+    loadballnamedata("口XX口", '7');
     //加载二字定所有球号码信息
     var arrBallInfo,FrankColor;
     function loadballnamedata(ballname, ballId) {
@@ -419,11 +419,11 @@ function chipin() {
     keydowncount = 1;
     //总下注金额
     var totalmoney = parseFloat($("#numbertotalmoney").text());
-    var sevenCredit = parseFloat($(window.parent.left.document).find("#my_rcedits_leavings").text());
-    var usemoney = parseFloat($(window.parent.left.document).find("#my_rcedits_use").text());
+    var sevenCredit = 10000; //parseFloat($(window.parent.left.document).find("#my_rcedits_leavings").text());
+    var usemoney = 20000; //parseFloat($(window.parent.left.document).find("#my_rcedits_use").text());
     
     disableBtnChipin();
-    var nStatus = $("#hidAccountStatus").val();
+/*    var nStatus = $("#hidAccountStatus").val();
     if (nStatus == 1) {
         alert("您的账号已被设置成（停用），请联系上级解决问题，之前如有下注仍属有效。！");
         enableBtnChipin();
@@ -433,7 +433,7 @@ function chipin() {
         alert("您的账号已被设置成（暂停下注），请联系上级解决问题，之前如有下注仍属有效。！");
         enableBtnChipin();
         return;
-    }
+    }*/
 
     var downmoney = $("#amount").val();
     if (downmoney == "" || downmoney <= 0 || isNaN(downmoney)) {
@@ -496,6 +496,52 @@ function chipin() {
         //投注
         var jsChipinObj = arrChipinObj[0];   
         arrChipinObj.splice(0, arrChipinObj.length);
+        
+        //alert(JSON.stringify(jsChipinObj));
+        
+        
+        
+        
+        $.ajax({
+			type : "POST",
+			url : "bet/confirm",
+			data : JSON.stringify(jsChipinObj),
+			contentType : "application/json",
+			dataType : "json",
+			success : function(data) {
+				if (data.code == 200) {
+					alert("successful!!");
+//					$.teninedialog({
+//						title : '系统提示',
+//						content : data.message,
+//						dialogHidden : function() {
+//							if(option.callback&& $.isFunction(option.callback)){
+//								option.callback();
+//							}
+//							else{
+//							   location.href = option.redirectUrl;
+//							}
+//						},
+//					});
+				} else {
+					alert("err");
+//					$.teninedialog({
+//						title : '系统提示',
+//						content : data.message
+//					});
+				}
+			},
+			error : function(data) {
+				alert("error!!");
+//				$.teninedialog({
+//					title : '系统提示',
+//					content : '操作失败'
+//				});
+			}
+		})
+        
+        
+        /**
         $.connection.hub.url = "../../signalr/hubs";
         signalr.connection_start(function () {
             //如果有打印过小票，先删除小票
@@ -519,7 +565,7 @@ function chipin() {
                     bet(robj);
                 });
             }
-        });
+        }); **/
     //}
 }
 

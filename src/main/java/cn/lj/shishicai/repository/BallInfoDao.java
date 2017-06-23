@@ -5,13 +5,12 @@
  *******************************************************************************/
 package cn.lj.shishicai.repository;
 
-import java.util.Date;
 import java.util.List;
 
-import cn.lj.shishicai.entity.Game;
+import cn.lj.shishicai.entity.BallInfo;
 
-public interface GameDao extends IBaseDao<Game, Integer> {
+public interface BallInfoDao extends IBaseDao<BallInfo, Integer> {
 
-	List<Game> findByGameDate(Date date);
+	List<BallInfo> findByBallId(int ballId);
 	
 }

@@ -88,7 +88,7 @@
 	</div>
 </body>
 
-<content tag="page-title">修改密码</content>
+<content tag="page-title">修改管理员信息</content>
 <content tag="currentId">4</content>
 <div id="javascript">
 

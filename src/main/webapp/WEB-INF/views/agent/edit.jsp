@@ -128,7 +128,7 @@
 </body>
 
 <content tag="page-title">修改管理员信息</content>
-<content tag="currentId">1</content>
+<content tag="currentId">4</content>
 <div id="javascript">
 
 <script type="text/javascript" src="${ctx}/static/p/common.js"></script>

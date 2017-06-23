@@ -132,7 +132,7 @@ hr {
 @media (min-width: 768px) {
   #page-wrapper {
     position: relative;
-    margin: 0 0 0 250px;
+    margin: 0 0 0 150px;
     padding: 0;
   }
 }
@@ -145,7 +145,7 @@ hr {
   border: 0;
 }
 #topbar .navbar-header {
-  width: 250px;
+  width: 150px;
   height: 100%;
   background: #1E1E1E;
   text-align: center;
@@ -265,7 +265,7 @@ hr {
   color: #ffffff;
 }
 #topbar #topbar-search {
-  width: 250px;
+  width: 150px;
   float: left;
 }
 #topbar #topbar-search i {
@@ -354,7 +354,7 @@ hr {
   margin-right: 5px;
 }
 #topbar .navbar-top-links ul.dropdown-alerts {
-  width: 250px;
+  width: 150px;
   min-width: 0;
 }
 #topbar .navbar-top-links ul.dropdown-alerts li {
@@ -401,7 +401,7 @@ hr {
   color: #ffffff;
 }
 #topbar .navbar-top-links ul.dropdown-messages {
-  width: 250px;
+  width: 150px;
   min-width: 0;
 }
 #topbar .navbar-top-links ul.dropdown-messages li {
@@ -462,7 +462,7 @@ hr {
   color: #ffffff;
 }
 #topbar .navbar-top-links ul.dropdown-tasks {
-  width: 250px;
+  width: 150px;
   min-width: 0;
   margin-left: -59px;
 }
@@ -725,7 +725,7 @@ hr {
   margin: 0;
   padding: 0;
   overflow: auto;
-  height: 250px;
+  height: 150px;
 }
 #chat-form #chat-box ul.chat-box-body > li {
   padding: 20px 24px;
@@ -1018,7 +1018,7 @@ background: #303030; /* Old browsers */
   .navbar-static-side {
     z-index: 1;
     position: absolute;
-    width: 250px;
+    width: 150px;
   }
 }
 .right-sidebar #topbar .navbar-header {
@@ -1030,7 +1030,7 @@ background: #303030; /* Old browsers */
   right: 0;
 }
 .right-sidebar #page-wrapper {
-  margin: 0 250px 0 0;
+  margin: 0 150px 0 0;
 }
 /* Begin Horizontal menu */
 /* Begin Left Sidebar Collapsed */
@@ -1163,13 +1163,13 @@ background: #303030; /* Old browsers */
 }
 #theme-setting {
   position: fixed;
-  right: -250px;
+  right: -150px;
   top: 120px;
   padding: 10px 13px;
   background: #ffffff;
   border: 1px solid #e5e5e5;
   border-right: 0;
-  width: 250px;
+  width: 150px;
   z-index: 9999;
   -webkit-transition: 0.4s all ease-in-out;
   transition: 0.4s all ease-in-out;
@@ -1351,7 +1351,7 @@ figcaption.ratings a {
 ul.todo-list {
   overflow: hidden;
   width: auto;
-  height: 250px;
+  height: 150px;
   padding: 0;
 }
 ul.todo-list li {

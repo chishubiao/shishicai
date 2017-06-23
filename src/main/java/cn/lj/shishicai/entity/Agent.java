@@ -24,6 +24,10 @@ public class Agent implements Serializable {
 
 	@Column(name="parent_id")
 	private int parentId;
+	@Column(name="min_chip")
+	private BigDecimal minChip;
+	@Column(name="single_chip_limit")
+	private BigDecimal singleChipLimit;
 
 	public Agent() {
 	}
@@ -59,6 +63,22 @@ public class Agent implements Serializable {
 
 	public void setParentId(int parentId) {
 		this.parentId = parentId;
+	}
+
+	public BigDecimal getMinChip() {
+		return minChip;
+	}
+
+	public void setMinChip(BigDecimal minChip) {
+		this.minChip = minChip;
+	}
+
+	public BigDecimal getSingleChipLimit() {
+		return singleChipLimit;
+	}
+
+	public void setSingleChipLimit(BigDecimal singleChipLimit) {
+		this.singleChipLimit = singleChipLimit;
 	}
 
 }

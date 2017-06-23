@@ -38,6 +38,7 @@ public final class GlobalExceptionHandler extends ABaseController{
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
 	public Map serviceException(ServiceException e) {
+		logger.error("异常",e);
 		return getReturnMap(ERROR_CODE,e.getMessage(),null);
 	}
 }

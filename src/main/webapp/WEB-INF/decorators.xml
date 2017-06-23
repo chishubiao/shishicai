@@ -7,7 +7,6 @@
 		<pattern>/Scripts/*</pattern>
 		<pattern>/login</pattern>
 		<pattern>/bet</pattern>
-		<pattern>/bet/*</pattern>
 	</excludes>
 	
 	<decorator name="default" page="default.jsp">

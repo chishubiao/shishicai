@@ -1,23 +1,51 @@
 package cn.lj.shishicai.entity;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Transient;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BallInfo {
+@Entity
+@NamedQuery(name="BallInfo.findAll", query="SELECT a FROM BallInfo a")
+public class BallInfo implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@JsonProperty("Id")
+	private int id;
+	
 
 	@JsonProperty("BallId")
-	Integer ballId =7;// 7
+	Integer ballId;
+	
+
 	@JsonProperty("BallContent")
-	String ballContent; // "0XX0"
+	String ballContent;
+	
+	@Transient
 	@JsonProperty("Rate")
-	Double rate = 96.0; // "96.0000"
+	BigDecimal rate; // "96.0000"
+	
+	@Transient
 	@JsonProperty("RateDvalue")
 	Double rateDvalue = 0.0; // 0.0000
+	
+	@Transient
 	@JsonProperty("Status")
 	String status = "0"; // 0
+	
+	@Transient
 	@JsonProperty("MinChip")
-	Double minChip = 1.0; // 1.0000
+	BigDecimal minChip; // 1.0000
+	
+	@Transient
 	@JsonProperty("SingleChipLimit")
-	Double singleChipLimit = 1000.0;// 1000.0000
+	BigDecimal singleChipLimit;// 1000.0000
 
 	public Integer getBallId() {
 		return ballId;
@@ -35,13 +63,7 @@ public class BallInfo {
 		this.ballContent = ballContent;
 	}
 
-	public Double getRate() {
-		return rate;
-	}
-
-	public void setRate(Double rate) {
-		this.rate = rate;
-	}
+	
 
 	public Double getRateDvalue() {
 		return rateDvalue;
@@ -59,20 +81,37 @@ public class BallInfo {
 		this.status = status;
 	}
 
-	public Double getMinChip() {
+	public BigDecimal getRate() {
+		return rate;
+	}
+
+	public void setRate(BigDecimal rate) {
+		this.rate = rate;
+	}
+
+	public BigDecimal getMinChip() {
 		return minChip;
 	}
 
-	public void setMinChip(Double minChip) {
+	public void setMinChip(BigDecimal minChip) {
 		this.minChip = minChip;
 	}
 
-	public Double getSingleChipLimit() {
+	public BigDecimal getSingleChipLimit() {
 		return singleChipLimit;
 	}
 
-	public void setSingleChipLimit(Double singleChipLimit) {
+	public void setSingleChipLimit(BigDecimal singleChipLimit) {
 		this.singleChipLimit = singleChipLimit;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
 }

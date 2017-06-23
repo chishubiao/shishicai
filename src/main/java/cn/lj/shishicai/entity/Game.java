@@ -23,21 +23,20 @@ public class Game implements Serializable {
 	private Date gameDate;
 
 	@Column(name="game_no")
-	private int gameNo;
+	private String gameNo;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="game_time")
-	private Date gameTime;
+
+	private String gameTime;
 
 	private String result;
 
-	private byte status;
+	private String status;
 
 	public Game() {
 	}
 
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
 	public void setId(int id) {
@@ -45,43 +44,46 @@ public class Game implements Serializable {
 	}
 
 	public Date getGameDate() {
-		return this.gameDate;
+		return gameDate;
 	}
 
 	public void setGameDate(Date gameDate) {
 		this.gameDate = gameDate;
 	}
 
-	public int getGameNo() {
-		return this.gameNo;
+	public String getGameNo() {
+		return gameNo;
 	}
 
-	public void setGameNo(int gameNo) {
+	public void setGameNo(String gameNo) {
 		this.gameNo = gameNo;
 	}
 
-	public Date getGameTime() {
-		return this.gameTime;
+	public String getGameTime() {
+		return gameTime;
 	}
 
-	public void setGameTime(Date gameTime) {
+	public void setGameTime(String gameTime) {
 		this.gameTime = gameTime;
 	}
 
 	public String getResult() {
-		return this.result;
+		return result;
 	}
 
 	public void setResult(String result) {
 		this.result = result;
 	}
 
-	public byte getStatus() {
-		return this.status;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setStatus(byte status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
+	
+
+	
 }

@@ -2,7 +2,11 @@ package cn.lj.shishicai.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
+import java.util.Date;
 
 
 /**
@@ -52,6 +56,18 @@ public class Bet implements Serializable {
 	private int sequence;
 
 	private String type;
+	
+	@Transient
+	private BigDecimal profit;
+	
+	@Transient
+	private BigDecimal commission;
+	
+
+	private byte flag;
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+	@Column(name="create_time")
+	private Date createTime;
 
 	public Bet() {
 	}
@@ -160,6 +176,38 @@ public class Bet implements Serializable {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public BigDecimal getProfit() {
+		return profit;
+	}
+
+	public void setProfit(BigDecimal profit) {
+		this.profit = profit;
+	}
+
+	public BigDecimal getCommission() {
+		return commission;
+	}
+
+	public void setCommission(BigDecimal commission) {
+		this.commission = commission;
+	}
+
+	public byte getFlag() {
+		return flag;
+	}
+
+	public void setFlag(byte flag) {
+		this.flag = flag;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 }

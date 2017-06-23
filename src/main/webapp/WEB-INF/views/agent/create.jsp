@@ -103,7 +103,7 @@
 </body>
 
 <content tag="page-title">添加代理</content> <content
-	tag="currentId">1</content>
+	tag="currentId">4</content>
 <div id="javascript">
 <script type="text/javascript" src="${ctx}/static/p/common.js"></script>
 	<script type="text/javascript">

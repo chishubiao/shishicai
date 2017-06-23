@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>管理员列表</title>
+<title>下注列表</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,15 +30,7 @@
 
 						<div class="panel-heading">
 							<ul id="generalTab" class="nav  responsive">
-								<li style="float: left; padding: 0px 10px">代理列表</li>
-
-								<li style="float: right; padding: 0px 10px">
-									<button type="submit"
-										onclick="javascript:location.href='${ctx}/agent/create';"
-										class="btn btn-yellow">
-										增加<i class="fa fa-plus mls"></i>
-									</button>
-								</li>
+								<li style="float: left; padding: 0px 10px">下注列表</li>
 							</ul>
 
 
@@ -49,10 +41,16 @@
 							<table class="table table-hover">
 								<thead>
 									<tr>
-										<th>用户名</th>
+										<th>彩种</th>
+										<th>订单编号</th>
+										<th>下单时间</th>
+										<th>号码</th>
+										<th>金额</th>
 										<th>赔率</th>
-										<th>用户信用</th>
-										<th>操作</th>
+										<th>中奖</th>
+										<th>盈亏</th>
+										<th>手续费</th>
+										<th>状态</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -73,26 +71,49 @@
 	
 </body>
 
-<content tag="page-title">代理列表</content>
-<content tag="currentId">4</content>
+<content tag="page-title">下注列表</content>
+<content tag="currentId">3</content>
 <div id="javascript">
+
+
+
 	<script type="text/ftpl" id="msgContent">
 <!--[each $content]-->
 									<tr>
 										<td>
-											<!--[$item.username]-->
+											<!--[$item.type]-->
 										</td>
 										<td>
-											<!--[$item.paidRate]-->
+											<!--[$item.id]-->
 										</td>
                                         <td>
-											<!--[$item.credit]-->
+											<!--[$item.createTime]-->
+										</td>
+
+                                        <td>
+											<!--[$item.param1]--><!--[$item.param2]-->
+										</td>
+
+                                        <td>
+											<!--[$item.betAmount]-->
+										</td>
+                                         <td>
+											<!--[$item.brokerPaidAmount]-->
+										</td>
+                                         <td>
+											<!--[$item.brokerPaidAmount]-->
+										</td>
+                                        <td>
+											<!--[$item.profit]-->
+										</td>
+                                         <td>
+											<!--[$item.commission]-->
 										</td>
 										<td>
 											<!--[if $item.status==1]-->
-                                                                                                                                                          激活 
+                                               赔彩                                                                                                       
                                             <!--[else]-->
-                                                                                                                                                         禁用
+                                                                                                                                                         未赔彩
                                             <!--[/if]-->
 										</td>
 
@@ -103,7 +124,7 @@
 	<script type="text/javascript" src="${ctx}/static/p/common.js"></script>
 	<script type="text/javascript">
 		var option={
-	         url:'${ctx}/agent/findPage'
+	         url:'${ctx}/bet/getPage'
 		};
 		$('#dataTable').getPage(option);
 	</script>

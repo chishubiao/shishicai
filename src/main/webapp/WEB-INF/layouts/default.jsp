@@ -97,33 +97,50 @@
 
 					<div class="clearfix"></div>
 					<li><a
-						href="${ctx}/index"><i class="fa fa-tachometer fa-fw">
+						href="${ctx}/index">
 								<div class="icon-bg bg-orange"></div>
 						</i><span class="menu-title">首页</span></a></li>
+						
+						<li><a
+						href="${ctx}/bet/betPage">
+								<div class="icon-bg bg-orange"></div>
+						</i><span class="menu-title">投注界面</span></a></li>
+						
+						<li><a
+						href="${ctx}/bet/gameList ">
+								<div class="icon-bg bg-orange"></div>
+						</i><span class="menu-title">游戏界面</span></a></li>
+						
+						
+						<li><a
+						href="${ctx}/bet/list">
+								<div class="icon-bg bg-orange"></div>
+						</i><span class="menu-title">下注明细</span></a></li>
+						
+						
+						
+						
 					<li><a
-						href="#"><i class="fa fa-send-o fa-fw">
+						href="#">
 								<div class="icon-bg bg-green"></div>
-						</i><span class="menu-title">用户管理</span><span class="fa arrow"></span></a>
+						</i><span class="menu-title">代理管理</span><span class="fa arrow"></span></a>
 						<ul class="nav nav-second-level collapse">
 						<shiro:hasAnyRoles name="admin,agent">
 							<li><a href="${ctx}/agent">代理列表</a></li>
 						</shiro:hasAnyRoles>
 							<li><a href="${ctx}/user/toModifyPassword">修改密码</a></li>
 						</ul></li>
-						<li><a
-						href="#"><i class="fa fa-send-o fa-fw">
-								<div class="icon-bg bg-green"></div>
-						</i><span class="menu-title">投注管理</span><span class="fa arrow"></span></a>
-						<ul class="nav nav-second-level collapse">
-							<li><a href="${ctx}/bet">投注首页</a></li>
-						</ul></li>
+						
 						
 						<li><a
-						href="#"><i class="fa fa-send-o fa-fw">
+						href="#">
 								<div class="icon-bg bg-green"></div>
 						</i><span class="menu-title">报表信息</span><span class="fa arrow"></span></a>
 						<ul class="nav nav-second-level collapse">
-							<li><a href="#">各种报表</a></li>
+							<li><a href="#">日报表</a></li>
+							<li><a href="#">周报表</a></li>
+							<li><a href="#">月报表</a></li>
+							<li><a href="#">历史账单</a></li>
  							
 						</ul></li>
 				</ul>
@@ -136,13 +153,13 @@
 			<!--BEGIN PAGE WRAPPER-->
 			<div id="page-wrapper">
 				<!--BEGIN TITLE & BREADCRUMB PAGE-->
-				<div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
-					<div class="page-header pull-left">
-						<div class="page-title"><sitemesh:getProperty property="page.page-title"/></div>
-					</div>
+<!-- 				<div id="title-breadcrumb-option-demo" class="page-title-breadcrumb"> -->
+<!-- 					<div class="page-header pull-left"> -->
+<%-- 						<div class="page-title"><sitemesh:getProperty property="page.page-title"/></div> --%>
+<!-- 					</div> -->
 					
-					<div class="clearfix"></div>
-				</div>
+<!-- 					<div class="clearfix"></div> -->
+<!-- 				</div> -->
 				<!--END TITLE & BREADCRUMB PAGE-->
 				<!--BEGIN CONTENT-->
 
