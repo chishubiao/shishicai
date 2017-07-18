@@ -16,6 +16,5 @@ protected Map<String,Object> getReturnMap(int code,String message,Object data){
 	map.put("message", message);
 	map.put("data", data);
 	return map;
-	
 }
 }
