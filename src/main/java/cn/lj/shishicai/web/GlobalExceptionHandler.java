@@ -30,7 +30,6 @@ public final class GlobalExceptionHandler extends ABaseController{
 
 	@Resource
 	MessageSource messageSource;
-
 	
 
 	
