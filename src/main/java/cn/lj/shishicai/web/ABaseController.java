@@ -10,12 +10,12 @@ public abstract class ABaseController {
 	protected static final int ERROR_CODE=500;
 	protected static final int NOT_FOUND_CODE=404;
 	protected static final int NOT_LOGIN_CODE=100;
+	
 protected Map<String,Object> getReturnMap(int code,String message,Object data){
 	Map<String,Object> map=new HashMap<String,Object>();
 	map.put("code",code);
 	map.put("message", message);
 	map.put("data", data);
 	return map;
-	
 }
 }

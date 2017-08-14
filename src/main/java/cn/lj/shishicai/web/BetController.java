@@ -33,6 +33,7 @@ public class BetController extends ABaseController {
 	@Autowired
 	private BallInfoService ballInfoService;
 
+	
 	@Autowired
 	private BallInfoDao ballInfoDao;
 
