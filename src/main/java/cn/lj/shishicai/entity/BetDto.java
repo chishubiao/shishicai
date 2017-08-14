@@ -10,8 +10,11 @@ public class BetDto {
 	private String opeeningId;
 
 	@JsonProperty("BallId")
-	Integer ballId;
+	private Integer ballId;
 
+	@JsonProperty("GameId")
+	private Long gameId;
+	
 	@JsonProperty("Mode")
 	private Integer mode;
 
@@ -32,6 +35,14 @@ public class BetDto {
 
 	public void setBallId(Integer ballId) {
 		this.ballId = ballId;
+	}
+
+	public Long getGameId() {
+		return gameId;
+	}
+
+	public void setGameId(Long gameId) {
+		this.gameId = gameId;
 	}
 
 	public Integer getMode() {

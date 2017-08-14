@@ -4,29 +4,30 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-
 /**
  * The persistent class for the agent database table.
  * 
  */
 @Entity
-@NamedQuery(name="Agent.findAll", query="SELECT a FROM Agent a")
+@NamedQuery(name = "Agent.findAll", query = "SELECT a FROM Agent a")
 public class Agent implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	private int id;
 
-	@Column(name="paid_rate")
+	@Column(name = "paid_rate")
 	private BigDecimal paidRate;
 
 	private BigDecimal credit;
 
-	@Column(name="parent_id")
+	@Column(name = "parent_id")
 	private int parentId;
-	@Column(name="min_chip")
+	
+	@Column(name = "min_chip")
 	private BigDecimal minChip;
-	@Column(name="single_chip_limit")
+	
+	@Column(name = "single_chip_limit")
 	private BigDecimal singleChipLimit;
 
 	public Agent() {
@@ -39,7 +40,6 @@ public class Agent implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 	public BigDecimal getPaidRate() {
 		return paidRate;

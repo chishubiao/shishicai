@@ -315,14 +315,16 @@
         <input type="hidden" id="hidnumbertotal" value="0" />
         <input type="hidden" value="0" name="countslt" />
         <input type="hidden" value="EZ" name="currendw" />
+        
+            <input type="hidden" id="gameid" value="20170624051" />
+		    <input type="hidden" id="comid" value="1" />
+		    <input type="hidden" id="userid" value="2445" />
+		    <input type="hidden" id="isNotChangeColor" value="0" />
+		    <input type="hidden" id="hidAccountStatus" value="0" />
+		    <input type="hidden" id="minChip" value="1" />
+		    <input type="hidden" id="singleChipLimit" value="1000" />
+		    ${param.gameId}
     </form>
-    <input type="hidden" id="gameid" value="1" />
-    <input type="hidden" id="comid" value="1" />
-    <input type="hidden" id="userid" value="2445" />
-    <input type="hidden" id="isNotChangeColor" value="0" />
-    <input type="hidden" id="hidAccountStatus" value="0" />
-    <input type="hidden" id="minChip" value="1" />
-    <input type="hidden" id="singleChipLimit" value="1000" />
    
 </body>
 </html>

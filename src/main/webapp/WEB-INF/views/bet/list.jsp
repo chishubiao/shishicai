@@ -44,7 +44,9 @@
 										<th>彩种</th>
 										<th>订单编号</th>
 										<th>下单时间</th>
-										<th>号码</th>
+										<th>开奖期数</th>
+										<th>开奖号码</th>
+										<th>投注号码</th>
 										<th>金额</th>
 										<th>赔率</th>
 										<th>中奖</th>
@@ -89,16 +91,21 @@
                                         <td>
 											<!--[$item.createTime]-->
 										</td>
-
+										<td>
+											<!--[$item.gameId]-->
+										</td>
+										<td>
+											<!--[$item.result]-->
+										</td>
                                         <td>
-											<!--[$item.param1]--><!--[$item.param2]-->
+											<!--[$item.content]-->
 										</td>
 
                                         <td>
 											<!--[$item.betAmount]-->
 										</td>
                                          <td>
-											<!--[$item.brokerPaidAmount]-->
+											<!--[$item.brokerPaidRate]-->
 										</td>
                                          <td>
 											<!--[$item.brokerPaidAmount]-->
@@ -110,10 +117,12 @@
 											<!--[$item.commission]-->
 										</td>
 										<td>
-											<!--[if $item.status==1]-->
-                                               赔彩                                                                                                       
+											<!--[if $item.flag==1]-->
+											 已开彩(中奖) 
+											<!--[elseif $item.flag==-1]-->
+											已开彩(未中奖)
                                             <!--[else]-->
-                                                                                                                                                         未赔彩
+                                                                                                                                                         未开彩
                                             <!--[/if]-->
 										</td>
 

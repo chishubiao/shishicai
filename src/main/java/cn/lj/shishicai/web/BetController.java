@@ -94,17 +94,18 @@ public class BetController extends ABaseController {
 	@ResponseBody
 	public Map<String, Object> confirm(@RequestBody BetDto betDto) {
 
+		betService.saveBet(betDto);
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("FrankColor", 80);
+		map.put("code", 200);
 		return map;
 	}
 
 	@RequestMapping("/paid")
 	@ResponseBody
-	public Map<String, Object> paid(String result, Integer gameId) {
-
+	public Map<String, Object> paid(String result, Long gameId) {
+		gameService.paid(result, gameId);
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("FrankColor", 80);
+		map.put("code", 200);
 		return map;
 	}
 

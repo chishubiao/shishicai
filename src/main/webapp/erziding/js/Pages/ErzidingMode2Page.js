@@ -486,6 +486,7 @@ function chipin() {
     var jsChipinObj = {
         OpeeningId: $("#hidOpeningId").val(),
         BallId: $("#hidBallId").val(),
+        GameId: $("#gameid").val(),
         Mode: 2,
         LstCHipInInfo: arrChipInInfo
     };
@@ -510,7 +511,8 @@ function chipin() {
 			dataType : "json",
 			success : function(data) {
 				if (data.code == 200) {
-					alert("successful!!");
+					alert("成功下注!!");
+					window.parent.location.reload();
 //					$.teninedialog({
 //						title : '系统提示',
 //						content : data.message,
